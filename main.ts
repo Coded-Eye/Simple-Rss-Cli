@@ -197,25 +197,25 @@ const Args = parse(Deno.args);
 if (Args.f != undefined) Args.f = (Args.f).toLocaleLowerCase();
 
 if (Args.f === "add") {
-    addSanitizedFeedToJson(Args.l)
+    addSanitizedFeedToJson(Args.l);
 }
 
 else if (Args.f === "update") {
-    updateAll()
+    updateAll();
 }
 
 else if (Args.f === "list") {
-    listAll()
+    listAll();
 }
 
 else if (Args.f === "delete" && Args.i >= 0) {
-    DelteFeed(Args.i)
+    DelteFeed(Args.i);
 }
 
 else if (Args._ === ["help"] || Args._ === ["h"] || Args.f === "help" || Args.f === "h") {
-    console.log(ALLCOMMANDS)
+    console.log(ALLCOMMANDS);
 }
 
 else {
-    console.log("use Help to show all current commands")
+    console.log("use -f help to show all current commands");
 }
