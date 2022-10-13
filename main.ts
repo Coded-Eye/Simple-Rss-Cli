@@ -85,7 +85,7 @@ const SanitizeFeed = (feed: CustomFeed): SanitisedCustomFeed => {
     return SanitizedFeedData
 };
 
-// get data from DATA.Json
+// get data from Data.Json
 const fetchJsonDataParsed = (): SanitisedCustomFeed[] | string => {
     const data: SanitisedCustomFeed[] = [];
 
@@ -138,6 +138,7 @@ const listAll = (): void => {
     }
 }
 
+// Update all Feeds
 const updateAll = async (): Promise<void> => {
 
     const updatedFeedsAndNotUpdatedfeeds: SanitisedCustomFeed[] = []
