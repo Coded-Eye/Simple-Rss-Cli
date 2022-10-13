@@ -166,7 +166,7 @@ const updateAll = async (): Promise<void> => {
 }
 
 // delete a feed
-const DelteFeed = (index: number): void | string => {
+const DelteFeed = (index: number): void => {
     const allFeeds: SanitisedCustomFeed[] | string = fetchJsonDataParsed();
 
     if (typeof allFeeds === "string") return console.log(Colors.red("There is no feed to delete"));
@@ -175,7 +175,7 @@ const DelteFeed = (index: number): void | string => {
 
     writeJsonSync(JSONFILE, allFeeds, { spaces: 4 });
 
-    console.info(Colors.green("Element Deleted Successfly"))
+    return console.info(Colors.green("Element Deleted Successfly"))
 }
 
 // deno-lint-ignore no-inferrable-types
